@@ -13,8 +13,8 @@ const ROWS = 4;
 export const PLAYER_X = 3;
 
 // How high the runner is lifted at each step of a jump, from the press on
-export const JUMP_HEIGHTS = [1, 2, 2, 2, 1];
-export const DUCK_STEPS = 5;
+export const JUMP_HEIGHTS = [1, 2, 2, 2, 2, 1];
+export const DUCK_STEPS = 6;
 
 export type ModeId = "easy" | "medium" | "hard";
 
@@ -47,9 +47,9 @@ export const MODES: Record<ModeId, Mode> = {
   easy: {
     name: "Easy",
     multiplier: 1,
-    speed: 5,
-    topSpeed: 7,
-    speedStep: 150,
+    speed: 4,
+    topSpeed: 6,
+    speedStep: 120,
     firstGap: 10,
     maxGap: 12,
     minGap: 6,
@@ -63,9 +63,9 @@ export const MODES: Record<ModeId, Mode> = {
   medium: {
     name: "Medium",
     multiplier: 2,
-    speed: 6,
-    topSpeed: 8,
-    speedStep: 120,
+    speed: 5,
+    topSpeed: 7,
+    speedStep: 100,
     firstGap: 8,
     maxGap: 9,
     minGap: 5,
