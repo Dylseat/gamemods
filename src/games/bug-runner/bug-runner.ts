@@ -13,8 +13,8 @@ const ROWS = 4;
 export const PLAYER_X = 3;
 
 // How high the runner is lifted at each step of a jump, from the press on
-export const JUMP_HEIGHTS = [1, 2, 2, 2, 2, 1];
-export const DUCK_STEPS = 6;
+export const JUMP_HEIGHTS = [1, 2, 2, 2, 1];
+export const DUCK_STEPS = 5;
 
 export type ModeId = "easy" | "medium" | "hard";
 

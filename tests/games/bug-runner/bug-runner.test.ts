@@ -82,7 +82,7 @@ test("a game starts in Easy, running at score 0, with nothing on the track", () 
   expect(bugRunner.status(s)).toEqual({
     phase: "playing",
     score: 0,
-    line: "Easy ×1 · 5 steps/s",
+    line: "Easy ×1 · 4 steps/s",
   });
 });
 
@@ -93,7 +93,7 @@ test("each step adds one point in Easy, two in Medium, three in Hard", () => {
 });
 
 test("at 5 steps a second the runner steps every other tick", () => {
-  const s = bugRunner.init(SEED);
+  const s = inMode("medium");
   expect(ticks(s, 1).distance).toBe(0);
   expect(ticks(s, 2).distance).toBe(1);
   expect(ticks(s, 10).distance).toBe(5);
@@ -107,8 +107,8 @@ test("a tick between two steps changes nothing shown", () => {
 });
 
 test("the speed rises with the distance, up to each mode's top, under 10 steps a second", () => {
-  expect([0, 149, 150, 300, 3000].map((d) => speedOf("easy", d))).toEqual([5, 5, 6, 7, 7]);
-  expect([0, 120, 240, 3000].map((d) => speedOf("medium", d))).toEqual([6, 7, 8, 8]);
+  expect([0, 119, 120, 240, 3000].map((d) => speedOf("easy", d))).toEqual([4, 4, 5, 6, 6]);
+  expect([0, 100, 200, 3000].map((d) => speedOf("medium", d))).toEqual([5, 6, 7, 7]);
   expect([0, 80, 160, 3000].map((d) => speedOf("hard", d))).toEqual([6, 7, 8, 8]);
   for (const m of Object.values(MODES)) expect(m.topSpeed).toBeLessThan(TENTHS_PER_STEP);
 });
@@ -122,7 +122,7 @@ test("h goes Easy, Medium, Hard and back, each time in a new game", () => {
   const easy = steps(bugRunner.init(SEED), 5);
   const medium = press(easy, "mode");
   expect(medium).toMatchObject({ mode: "medium", distance: 0, progress: 0, obstacles: [] });
-  expect(line(medium)).toBe("Medium ×2 · 6 steps/s");
+  expect(line(medium)).toBe("Medium ×2 · 5 steps/s");
   expect(press(medium, "mode").mode).toBe("hard");
   expect(press(medium, "mode", "mode").mode).toBe("easy");
 });

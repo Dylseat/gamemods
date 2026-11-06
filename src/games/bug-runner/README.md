@@ -7,10 +7,10 @@ An endless runner. A little star runs through the terminal: jump over the bugs o
 | Key | Action                                     |
 | :-- | :----------------------------------------- |
 | `f` | Jump                                       |
-| `g` | Duck for 6 steps; in the air, dive down    |
+| `g` | Duck for 5 steps; in the air, dive down    |
 | `h` | Next mode, in a new game                   |
 
-The world moves step by step, and speeds up the farther you run; the status line shows the speed in steps a second. A jump lasts 6 steps and clears a bug, but an error is too low to jump over: duck under it. You jump from the ground only, ducked or not. `g` in the air dives straight down into a duck, and `g` while ducked holds the duck 6 more steps: chain a jump and a duck to clear a bug and an error close together. Rising into an error or diving onto a bug hits it.
+The world moves step by step, and speeds up the farther you run; the status line shows the speed in steps a second. A jump lasts 5 steps and clears a bug, but an error is too low to jump over: duck under it. You jump from the ground only, ducked or not. `g` in the air dives straight down into a duck, and `g` while ducked holds the duck 5 more steps: chain a jump and a duck to clear a bug and an error close together. Rising into an error or diving onto a bug hits it.
 
 Hitting an obstacle ends the game. `r` plays again in the same mode.
 
