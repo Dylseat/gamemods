@@ -1,5 +1,6 @@
 import type { JsonValue } from "claude-code";
 import { twentyFortyEight } from "./2048/2048";
+import { bugRunner } from "./bug-runner/bug-runner";
 import { echo } from "./echo/echo";
 import type { Game } from "./game";
 import { hogzzle } from "./hogzzle/hogzzle";
@@ -17,6 +18,7 @@ const ENTRIES = {
   },
   echo: { name: "Echo", tagline: "Repeat the sequence, the grid grows", game: echo },
   "2048": { name: "2048", tagline: "Slide the tiles, reach 2048", game: twentyFortyEight },
+  "bug-runner": { name: "Bug Runner", tagline: "Jump the bugs, duck the errors", game: bugRunner },
 } satisfies Record<string, GameEntry>;
 
 export type GameId = keyof typeof ENTRIES;

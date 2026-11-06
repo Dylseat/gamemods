@@ -61,6 +61,7 @@ The Claude Code game mods available today. Rules, keys and score of each game ar
 | [Hogzzle](src/games/hogzzle/README.md)         | Swap the tiles until PostHog's hedgehog is whole | Desktop           |
 | [Echo](src/games/echo/README.md)               | Repeat a growing sequence of lit cells           | Desktop, terminal |
 | [2048](src/games/2048/README.md)               | Slide and merge the tiles until one reaches 2048 | Desktop, terminal |
+| [Bug Runner](src/games/bug-runner/README.md)   | Run as far as you can, over bugs, under errors   | Desktop, terminal |
 
 ## Limitations
 
